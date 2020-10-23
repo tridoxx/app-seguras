@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>App seguras</title>
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<title>Seguras</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <a href="./register.html">
+        <img class="btn-regresar" src="./img/Boton_Regresar.svg">
+      </a>
+
+      <h3 style="padding-top: 55px;">Crea un pin de seguridad</h>
+    </div>
+
+
+    <div class="form">
+
+      <div id="divOuter">
+        <div id="divInner">
+          <input id="partitioned" type="text" maxlength="4"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            onKeyPress="if(this.value.length==4) return false;" />
+        </div>
+      </div>
+
+
+
+      
+
+        <div class="parent">
+          <p>Nota: Debe ser un número que recuerdes fácilmente
+            debido a que te lo pediremos en diferentes
+            situaciones y de este manera podremos garantizar
+            tu seguridad.</p>
+          <img src="img/Illustracion4.svg" alt="" class="image2-perro" srcset="">
+         
+  
+          
+        </div>
+
+
+      <button class="button" onclick="window.location.href='./tarjetas.html'">continuar</button>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

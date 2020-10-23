@@ -1,0 +1,25 @@
+function initMap() {
+  const locationRio = { lat: -22.915, lng: -43.197 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: locationRio,
+    gestureHandling: "cooperative",
+  });
+  var myloc = new google.maps.Marker({
+       clickable: false,
+       icon: new google.maps.MarkerImage('//maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
+                                                       new google.maps.Size(22,22),
+                                                       new google.maps.Point(0,18),
+                                                       new google.maps.Point(11,11)),
+       shadow: null,
+       zIndex: 999,
+       map: // your google.maps.Map object
+});
+
+  if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(pos) {
+       var me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+       myloc.setPosition(me);
+  }, function(error) {
+       // ...
+  });
+}
